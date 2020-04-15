@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculation_inputs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:showIn="@layout/activity_main"
+   >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_check_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/input_check_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter_check_amount"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_tip_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_check_amount">
+
+        <EditText
+            android:id="@+id/input_tip_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tip_percentage_label"
+            android:inputType="number"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionDone"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/calculation_outputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_tip_percentage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bill_amount"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="$20.00"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/bill_amount_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check amount"
+                tools:text="Check"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tip_dollar_amount"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="$11.50"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tip_dollar_amount_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="Tip"
+                android:text="Tip"
+                android:gravity="center_horizontal" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_dollar_amount"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="$31.50"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/total_dollar_amount_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                tools:text="Total"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/calculation_name"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculation_outputs"
+        android:textAlignment="center"
+        tools:text="Veggie Palace"
+        android:gravity="center_horizontal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
