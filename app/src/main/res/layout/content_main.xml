@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                tools:text="$20.00"
+                tools:text="$10.00"
                 android:gravity="center_horizontal" />
 
             <TextView
@@ -105,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                tools:text="$11.50"
+                tools:text="$14.50"
                 android:gravity="center_horizontal" />
 
             <TextView
@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                tools:text="$31.50"
+                tools:text="$24.50"
                 android:gravity="center_horizontal" />
 
             <TextView

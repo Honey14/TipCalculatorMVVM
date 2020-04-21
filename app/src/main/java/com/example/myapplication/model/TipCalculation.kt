@@ -5,4 +5,5 @@ data class TipCalculation (
     val tipPercentage: Int = 0,
     val tipAmount : Double = 0.0,
     val grandTotal : Double = 0.0
+
 )
